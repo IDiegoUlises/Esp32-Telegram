@@ -105,3 +105,4 @@ void loop()
   }
 }
 ```
+* Se necesita descarga las librerias ArduinoJson y telegram bot https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot
