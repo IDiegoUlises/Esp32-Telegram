@@ -16,7 +16,7 @@ const unsigned long BOT_MTBS = 1000; // mean time between scan messages
 WiFiClientSecure secured_client;
 UniversalTelegramBot bot(BOT_TOKEN, secured_client);
 unsigned long bot_lasttime; // last time messages' scan has been done
-const int ledPin = LED_BUILTIN;
+const int ledPin = 2;
 int ledStatus = 0;
 void handleNewMessages(int numNewMessages)
 {
