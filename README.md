@@ -146,28 +146,34 @@ void setup()
 void loop()
 {
   //Espera
-  delay(1000);
+  //delay(1000);
 
   String chat_id = String(bot.messages[0].chat_id);
+  
   String text = bot.messages[0].text;
   String from_name = bot.messages[0].from_name;
+
+  boolean newMensaje = bot.getUpdates(bot.last_message_received + 1);
   
   if (chat_id != CHAT_ID )
   {
     bot.sendMessage(chat_id, "No autorizado", "");
     //return; //salir
+    Serial.println("No permitido");
   }
 
-  else if (text == "/encendido")
+  else if (text == "/on")
   {
     digitalWrite(led, HIGH);
     bot.sendMessage(chat_id, "Led ESTA ENCENDIDO", "");
+    Serial.println("Encendido");
   }
 
-  else if (text == "/apagar")
+  else if (text == "/off")
   {
     digitalWrite(led, LOW);
     bot.sendMessage(chat_id, "Led ESTA apagado", "");
+    Serial.println("Apagado");
   }
 
   else
@@ -180,4 +186,5 @@ void loop()
 
 
 }
+
 ```
