@@ -149,25 +149,30 @@ void loop()
   delay(1000);
 
   String chat_id = String(bot.messages[0].chat_id);
+  String text = bot.messages[0].text;
+  String from_name = bot.messages[0].from_name;
+  
   if (chat_id != CHAT_ID )
   {
     bot.sendMessage(chat_id, "No autorizado", "");
     //return; //salir
   }
 
-  String text = bot.messages[0].text;
-  String from_name = bot.messages[0].from_name;
-
   else if (text == "/encendido")
   {
     digitalWrite(led, HIGH);
-    bot.sendMessage(chat_id, "Led ESTA ECENDIDO", "");
+    bot.sendMessage(chat_id, "Led ESTA ENCENDIDO", "");
   }
 
   else if (text == "/apagar")
   {
     digitalWrite(led, LOW);
     bot.sendMessage(chat_id, "Led ESTA apagado", "");
+  }
+
+  else
+  {
+    
   }
 
   //Espera
