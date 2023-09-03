@@ -188,3 +188,99 @@ void loop()
 }
 
 ```
+
+### Codigo 2 ahora funciona solamente que cuando ingrese un usuario no autorizado debe no permitir ejecutar comandos
+```c++
+#include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include <UniversalTelegramBot.h>
+
+// Wifi network station credentials
+#define WIFI_SSID "Wifi Home"
+#define WIFI_PASSWORD "S4m4sw3n0s"
+// Telegram BOT Token (Get from Botfather)
+#define BOT_TOKEN "6651295482:AAHSOXNTzMyJmrj6nuQi7wskSMFatI8Uyks"
+#define CHAT_ID "6615998413"
+
+int led = 2;
+
+WiFiClientSecure secured_client;
+UniversalTelegramBot bot(BOT_TOKEN, secured_client);
+
+void setup()
+{
+  Serial.begin(115200);
+  pinMode(led, OUTPUT);
+
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  secured_client.setCACert(TELEGRAM_CERTIFICATE_ROOT); // Add root certificate for api.telegram.org
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    delay(500);
+  }
+  Serial.print("\nWiFi connected. IP address: ");
+  Serial.println(WiFi.localIP());
+
+
+}
+
+void loop()
+{
+  //Espera
+  //delay(1000);
+
+  int numNewMessages = bot.getUpdates(bot.last_message_received + 1);
+
+  for (int i = 0; i < numNewMessages; i++)
+  {
+
+    String chat_id = String(bot.messages[i].chat_id);
+
+    String text = bot.messages[i].text;
+    String from_name = bot.messages[i].from_name;
+
+    Serial.println("Dentro del for");
+
+    while (numNewMessages)
+    {
+      Serial.println("Dentro del while");
+
+      if (chat_id != CHAT_ID )
+      {
+        bot.sendMessage(chat_id, "No autorizado", "");
+        //return; //salir
+        Serial.println("No permitido");
+      }
+
+      else if (text == "/on")
+      {
+        digitalWrite(led, HIGH);
+        bot.sendMessage(chat_id, "Led ESTA ENCENDIDO", "");
+        Serial.println("Encendido");
+      }
+
+      else if (text == "/off")
+      {
+        digitalWrite(led, LOW);
+        bot.sendMessage(chat_id, "Led ESTA apagado", "");
+        Serial.println("Apagado");
+      }
+
+      else
+      {
+
+      }
+      //Actualiza el valor importante para salir del bucle while
+      numNewMessages = bot.getUpdates(bot.last_message_received + 1);
+
+    }
+
+  }
+
+  //Espera
+  delay(1000);
+
+
+}
+```
