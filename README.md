@@ -106,3 +106,73 @@ void loop()
 }
 ```
 * Se necesita descarga las librerias ArduinoJson y telegram bot https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot
+
+### Codigo de pruebas
+```c++
+#include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include <UniversalTelegramBot.h>
+
+// Wifi network station credentials
+#define WIFI_SSID "Wifi Home"
+#define WIFI_PASSWORD "S4m4sw3n0s"
+// Telegram BOT Token (Get from Botfather)
+#define BOT_TOKEN "6651295482:AAHSOXNTzMyJmrj6nuQi7wskSMFatI8Uyks"
+#define CHAT_ID "6615998413"
+
+int led = 2;
+
+WiFiClientSecure secured_client;
+UniversalTelegramBot bot(BOT_TOKEN, secured_client);
+
+void setup()
+{
+  Serial.begin(115200);
+  pinMode(led, OUTPUT);
+
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  secured_client.setCACert(TELEGRAM_CERTIFICATE_ROOT); // Add root certificate for api.telegram.org
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    delay(500);
+  }
+  Serial.print("\nWiFi connected. IP address: ");
+  Serial.println(WiFi.localIP());
+
+
+}
+
+void loop()
+{
+  //Espera
+  delay(1000);
+
+  String chat_id = String(bot.messages[0].chat_id);
+  if (chat_id != CHAT_ID )
+  {
+    bot.sendMessage(chat_id, "No autorizado", "");
+    //return; //salir
+  }
+
+  String text = bot.messages[0].text;
+  String from_name = bot.messages[0].from_name;
+
+  else if (text == "/encendido")
+  {
+    digitalWrite(led, HIGH);
+    bot.sendMessage(chat_id, "Led ESTA ECENDIDO", "");
+  }
+
+  else if (text == "/apagar")
+  {
+    digitalWrite(led, LOW);
+    bot.sendMessage(chat_id, "Led ESTA apagado", "");
+  }
+
+  //Espera
+  delay(1000);
+
+
+}
+```
