@@ -12,14 +12,14 @@
 #define WIFI_SSID "Wifi Home"
 #define WIFI_PASSWORD "S4m4sw3n0s"
 
-//Telegram BOT Token
+//Telegram Bot Token
 #define BOT_TOKEN "6651295482:AAHSOXNTzMyJmrj6nuQi7wskSMFatI8Uyks"
 #define CHAT_ID "6615998413"
 
 //Led
 int led = 2;
 
-//Objeto WifiClientSecure y bot
+//Objeto WifiClientSecure y Bot
 WiFiClientSecure secured_client;
 UniversalTelegramBot bot(BOT_TOKEN, secured_client);
 
