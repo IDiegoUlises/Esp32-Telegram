@@ -102,7 +102,7 @@ void loop()
 
   }
 
-  //Espera
+  //Espera un segundo
   delay(1000);
 }
 ```
