@@ -11,9 +11,8 @@
 
 ### Crear el Bot
 
-<img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/IMG-20230911-WA0001.jpg" />
+<img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/IMG-20230911-WA0001.jpg" width="450" height="800" />
 
-https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/IMG-20230911-WA0001.jpg
 
 
 
