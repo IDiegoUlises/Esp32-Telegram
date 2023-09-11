@@ -1,7 +1,10 @@
 # Esp32-Telegram
 
-### Libreria
+### Librerias
 <img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/Universal-TelegramBot-Libreria.png" />
+<img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/ArduinoJson-Libreria.png" />
+
+
 
 
 
