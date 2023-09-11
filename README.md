@@ -17,6 +17,7 @@
 
 ### ID De Usuario
 <img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/IMG-20230911-WA0000.jpg" width="450" height="800" />
+
 * Se debe obtener el ID del usuario
 
 ### Codigo
