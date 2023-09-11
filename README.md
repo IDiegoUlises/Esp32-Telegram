@@ -9,6 +9,12 @@
 
 * ArduinoJson se utiliza porque es una libreria de dependencia para utilizar la libreria Telegram Bot
 
+### Crear el Bot
+
+<img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/IMG-20230911-WA0001.jpg" />
+
+https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/IMG-20230911-WA0001.jpg
+
 
 
 
