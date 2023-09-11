@@ -7,7 +7,7 @@
 
 <img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/ArduinoJson-Libreria.png" />
 
-* ArduinoJson se utiliza porque libreria de dependencia que se necesita para utilizar la libreria Telegram Bot
+* ArduinoJson se utiliza porque es una libreria de dependencia para utilizar la libreria Telegram Bot
 
 
 
