@@ -1,6 +1,6 @@
 # Esp32-Telegram
 
-* Se necesita descarga las librerias ArduinoJson que se puede descargar desde el aide de Arduino y telegram bot https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot parece que telgram bot tambien se puede descargar desde el aide de arduino
+
 
 ### Codigo Optimizado que funciona
 ```c++
