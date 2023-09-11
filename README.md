@@ -1,4 +1,4 @@
-# Esp32-Telegram
+# Esp32 Telegram
 
 ### Librerias
 <img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/Universal-TelegramBot-Libreria.png" />
