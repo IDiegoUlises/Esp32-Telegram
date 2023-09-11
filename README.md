@@ -13,7 +13,7 @@
 
 <img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/IMG-20230911-WA0001.jpg" width="450" height="800" />
 
-* Se debe obtener el Token del Bot
+* Se debe obtener el token del Bot
 
 ### Codigo
 ```c++
