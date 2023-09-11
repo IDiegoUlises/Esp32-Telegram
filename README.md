@@ -14,9 +14,11 @@
 
 //Telegram Bot Token
 #define BOT_TOKEN "6651295482:AAHSOXNTzMyJmrj6nuQi7wskSMFatI8Uyks"
+
+//Identificador del usuario que puede utilizar el bot
 #define CHAT_ID "6615998413"
 
-//Led
+//Pin para controlar el Led
 int led = 2;
 
 //Objeto WifiClientSecure y Bot
