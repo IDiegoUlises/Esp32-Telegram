@@ -9,16 +9,13 @@
 
 * ArduinoJson se utiliza porque es una libreria de dependencia para utilizar la libreria Telegram Bot
 
-### Crear el Bot
+### Crear Bot
 
 <img src="https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/IMG-20230911-WA0001.jpg" width="450" height="800" />
 
+* Se debe obtener el Token del Bot
 
-
-
-
-
-### Codigo Optimizado que funciona
+### Codigo
 ```c++
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
