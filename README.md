@@ -97,7 +97,7 @@ void loop()
       else if (text == "/on")
       {
         digitalWrite(led, HIGH);
-        bot.sendMessage(chat_id, "Led Esta ENCENDIDO", "");
+        bot.sendMessage(chat_id, "Led Encendido", "");
         Serial.println("Led Encendido");
       }
 
@@ -105,7 +105,7 @@ void loop()
       else if (text == "/off")
       {
         digitalWrite(led, LOW);
-        bot.sendMessage(chat_id, "Led esta APAGADO", "");
+        bot.sendMessage(chat_id, "Led Apagado", "");
         Serial.println("Led Apagado");
       }
 
