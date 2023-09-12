@@ -127,4 +127,5 @@ void loop()
 }
 ```
 
+### Funcionamiento
 ![](https://github.com/IDiegoUlises/Esp32-Telegram/blob/main/Imagenes/GIF-230911_223215.gif)
